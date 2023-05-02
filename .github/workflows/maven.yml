@@ -20,6 +20,6 @@ jobs:
     - name: adb device
       run: sudo apt-get install android-sdk-platform-tools
     - name: adb connect
-      run: adb connect 192.168.0.132:5037
+      run: adb connect -e 192.168.0.132:5037
     - name: Build with Maven
       run: mvn -B package --file pom.xml
