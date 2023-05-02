@@ -16,7 +16,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: appium install
-      run: npm install -g appium   
+      run: npm install -g appium 
+    - name: adb device
+      run: sudo apt-get install android-sdk-platform-tools
     - name: adb connect
       run: adb connect 192.168.0.132:5555
     - name: Build with Maven
